@@ -4,13 +4,17 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 //import { createClient } from '@supabase/supabase-js'
 
 //const supabaseUrl = 'https://zcpsievhvzshzdtfxzka.supabase.co'
 //const supabaseKey = process.env.SUPABASE_KEY
 //const supabase = createClient(supabaseUrl, supabaseKey)
 function App() {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -46,15 +50,13 @@ function App() {
     <div class="header">
 
      <h1>LiveNEU</h1>
-     <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        Dashboard
-      </Button>
+     <button class="hamburger"     
+      onClick={handleClick}> <div class = "buttonOption"> 
+      ☰
+      </div>  
+      
+      </button> 
+
 
       
       <Menu
