@@ -13,16 +13,72 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px; /* some padding */
+  text-align: left ; /* center the text */
+  background: #F24822; /* green background */
+  color: white; /* white text color */
 }
+
+
+.hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  height : 64px;
+  background-color: #370f5d;
+  color: rgb(255, 0, 0);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 2px;
+
+
+
+  font-size: 30px;
+  cursor: pointer;
+}
+.buttonOption{
+
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 80px;
+}
+/*
+.navbar {
+  overflow: hidden; /* Hide overflow 
+  background-color: whitesmoke; /* Dark background color 
+}
+
+/* Style the navigation bar links 
+.navbar a {
+  
+  float: left; /* Make sure that the links stay side-by-side 
+  display: block; /* Change the display to block, for responsive reasons (see below) 
+  color: black; /* White text color 
+  text-align: center; /* Center the text 
+  padding: 14px 20px; /* Add some padding 
+  text-decoration: underline; /* Remove underline 
+  
+}
+
+/* Right-aligned link 
+.navbar a.right {
+  float: right; /* Float a link to the right 
+}
+
+/* Change color on hover/mouse-over 
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color 
+  color: black; /* Black text color 
+}
+*/
+
+
 
 .App-link {
   color: #61dafb;
