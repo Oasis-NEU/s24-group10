@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -68,10 +69,22 @@ function App() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}>Walk Through</MenuItem>
-        <MenuItem onClick={handleClose}>Dorms</MenuItem>
-        <MenuItem onClick={handleClose}>About</MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link class = "dirHome" to ={"/Home"}>
+        Home
+          </Link></MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link class = "dirHome" to ={"/Walk"}>
+        Walk Through
+          </Link></MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link class = "dirHome" to ={"/Dorms"}>
+        Dorms
+          </Link></MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link class = "dirHome" to ={"/About"}>
+        About
+          </Link></MenuItem>
 
       </Menu> 
      

@@ -40,9 +40,13 @@
   font-size: 30px;
   cursor: pointer;
 }
-.buttonOption{
+.dirHome{
+  text-decoration: none;
+  font-weight: bold;
+  color: #e100a5;
 
 }
+
 
 /* Increase the font size of the <h1> element */
 .header h1 {
