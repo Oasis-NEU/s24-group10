@@ -71,7 +71,7 @@ function App() {
         <MenuItem onClick={handleClose}>Dorms</MenuItem>
         <MenuItem onClick={handleClose}>About</MenuItem>
 
-      </Menu>
+      </Menu> 
      
      </div>
      
