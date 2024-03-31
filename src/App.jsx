@@ -41,53 +41,24 @@ function App() {
   };
 
   return (
+
     <>
-      <title>Family</title>
-      <div className="header">
+      <div class="topnav">
+      <a href="#about">About</a>
+      <a href="#Dorms">Dorms</a>
+      <a href="#Walkthrough">Walkthrough</a>
+      <a href="#home">Home</a>
+      </div><title>Family</title><div className="directory">
+
+      </div><div className="header">
         <h1>LiveNEU</h1>
-        <button className="hamburger"
-          onClick={handleClick}> <div className="buttonOption">
-            ☰
-          </div>
-        </button>
 
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            'aria-labelledby': 'basic-button',
-          }}>
-          <MenuItem onClick={handleClose}>
-            <Link class="dirHome" to={"/Home"}>
-              Home
-            </Link></MenuItem>
-          <MenuItem onClick={handleClose}>
-            <Link class="dirHome" to={"/Walk"}>
-              Walk Through
-            </Link></MenuItem>
-          <MenuItem onClick={handleClose}>
-            <Link class="dirHome" to={"/Dorms"}>
-              Dorms
-            </Link></MenuItem>
-          <MenuItem onClick={() => myRef.current.scrollIntoView({ behavior: "smooth" })
-          }>
-            About
-          </MenuItem>
-        </Menu>
-      </div>
 
-      <div ref={myRef}>Element to scroll to</div>
-
-      <h1>Dorm List</h1>
-      <button onClick={() => readDorms()}>Load</button>
-      <ul>
+      </div><div ref={myRef}></div><h1>Dorm List</h1><ul>
         {dorms.map((dorm) => (
           <li key={dorm.id}>{dorm.name}</li>
         ))}
-      </ul>
-    </>
+      </ul></>
   )
 }
 
