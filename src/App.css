@@ -13,51 +13,126 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   display: flex;
-  padding: 10px; /* some padding */
-  text-align: left ; /* center the text */
-  background: #F24822; /* green background */
-  color: white; /* white text color */
+  padding: 10px;
+  /* some padding */
+  text-align: left;
+  /* center the text */
+  background: #F24822;
+  /* green background */
+  color: white;
+  /* white text color */
+  transition: .3s ease-in-out;
+  height: 400px;
+  align-items: center;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  background-color: #ededed;
   overflow: hidden;
+  border-top: 5px solid #F24822;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: right;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
-  padding: 10px 15px; /* Increased horizontal padding for spacing */
-  border-radius: 10px;
+  padding: 10px 10px;
+  /* Increased horizontal padding for spacing */
   font-size: 30px;
-  transition: background-color .5s;
-  background-size: 10 0px;
-  background-color: #F24822;
-  margin-left: 10px; /* Added margin for spacing between links */
+  transition: .2s ease-in-out;
+  background: linear-gradient(to left, #ededed 50%, #F24822 50%) right;
+  background-size: 205% 100%;
+  margin-left: 10px;
+  /* Added margin for spacing between links */
+  margin-bottom: 10px;
+  /* Added margin for spacing from the bottom */
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.topnav a.logo {
+  float: left;
+  font-weight: bold;
 }
 
 
-.topnav a:hover {
-  background-color: rgb(223, 125, 104);
+.topnav a.menu:hover {
+  background-position: left;
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.logo:hover {
+  background-position: left;
   color: rgb(255, 255, 255);
 }
 
 
 /* Increase the font size of the <h1> element */
 .header h1 {
-  font-size: 70px;
+  font-size: 120px;
 }
 
+.menu {
+  color: red;
+}
 
+.header img {
+  height: 100px;
+  width: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
+.beside {
+  display: flex;
+  width: 1600px;
+}
+
+.section {
+  margin-right: 20px;
+  padding: 20px;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.section h1 {
+  border-bottom: 5px solid #F24822;
+  padding-bottom: 5px;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-right: 800px;
+
+}
+
+.section p2 {
+  font-weight: bold;
+}
+
+#About {
+  scroll-margin-top: 100px;
+}
+
+#Walkthrough {
+  scroll-margin-top: 100px;
+}
 
 .App-link {
   color: #61dafb;
 }
 
-
+.before {
+  height: 100px;
+  width: 100px;
+  flex-grow: 1;
+  background-color: #F24822;
+}
