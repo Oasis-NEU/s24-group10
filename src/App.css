@@ -24,7 +24,7 @@ html {
   text-align: left;
   /* center the text */
   background: #F24822;
-  /* green background */
+  /* red background */
   color: white;
   /* white text color */
   transition: .3s ease-in-out;
@@ -35,10 +35,15 @@ html {
 /* Add a black background color to the top navigation */
 .topnav {
   position: sticky;
+  /* sticky position */
   top: 0;
+  /* ensures it stays on top of the page */
   background-color: #ededed;
+  /* white background */
   overflow: hidden;
+  /* fills up the navbar */
   border-top: 5px solid #F24822;
+  /* red text color */
 }
 
 /* Style the links inside the navigation bar */
@@ -60,6 +65,7 @@ html {
   margin-right: 10px;
 }
 
+/* Official LiveNEU logo text */
 .topnav a.logo {
   float: left;
   font-weight: bold;
@@ -71,6 +77,8 @@ html {
   color: rgb(255, 255, 255);
 }
 
+
+/* Logo when hovered over*/
 .topnav a.logo:hover {
   background-position: left;
   color: rgb(255, 255, 255);
@@ -82,10 +90,7 @@ html {
   font-size: 120px;
 }
 
-.menu {
-  color: red;
-}
-
+/* Logo in the header */
 .header img {
   height: 100px;
   width: auto;
@@ -93,11 +98,7 @@ html {
   margin-bottom: 20px;
 }
 
-.beside {
-  display: flex;
-  width: 1600px;
-}
-
+/* section with information */
 .section {
   margin-right: 20px;
   padding: 20px;
@@ -105,34 +106,35 @@ html {
   flex-grow: 1;
 }
 
+/* section title */
 .section h1 {
   border-bottom: 5px solid #F24822;
+  /* red bottom border */
   padding-bottom: 5px;
   font-size: 50px;
   margin-top: 30px;
   margin-right: 800px;
-
 }
 
+
+/* bold text */
 .section p2 {
   font-weight: bold;
 }
 
+/* #About section */
 #About {
   scroll-margin-top: 100px;
+  /* Makes it so that the scroll does not cover up the heading */
 }
 
+/* #Walkthrough section */
 #Walkthrough {
   scroll-margin-top: 100px;
+  /* Makes it so that the scroll does not cover up the heading */
 }
 
+/* A link in the app */
 .App-link {
   color: #61dafb;
-}
-
-.before {
-  height: 100px;
-  width: 100px;
-  flex-grow: 1;
-  background-color: #F24822;
 }
