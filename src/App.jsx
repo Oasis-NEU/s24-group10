@@ -43,7 +43,7 @@ function App() {
         <div id="Home"></div>
         <div className="header">
           <h1>LiveNEU</h1>
-          <img src="src/assets/LiveNEU Logo.png"></img>
+          <img src="src/assets/LiveNEULogoWhite.png"></img>
         </div>
 
         <div className="topnav">
@@ -52,7 +52,8 @@ function App() {
           <a href="#Walkthrough" className="menu">Walkthrough</a>
           <Link to="#Dorms" className="menu">Dorms</Link>
           <a href="#Home" className="menu">Home</a>
-          <a href="#Home" className="logo">LiveNEU</a>
+          <a href="#Home" className="logo">LiveNEU </a>
+          <a className="gap"></a>
 
         </div>
 
@@ -87,8 +88,55 @@ function App() {
             <li>Figure out who has the best selection number and selection time. Whoever has the best selection number (lowest number- closest to 1) will be the person selecting for the group. Make sure this person knows how the group wants to be placed!</li>
           </ol>
           <p1> Login to Housing Online up to five days prior to your selection time to view vacancies on the Northeastern Vacancy Viewer. Plan to FILL all of the bed spaces in the apartment as it is required during the Group Selection  Students may need to expand/decrease their group size during the process in order to fill each space in their selected apartment. For example: If you are in a roommate pair, you would not be able to select spaces in a six person apartment unless you had four other people to select with; your only choices would be two person apartments.</p1>
+          <br /><br />
+          <p2>Timeline: </p2>
+
+          <ul>
+            <li>
+              December 2023
+              <ul>
+                <li>Applications posted to your Housing Online.</li>
+              </ul>
+            </li>
+            <li>
+              January 19, 2024
+              <ul>
+                <li>Fall and Spring Applications Due. Required students who do not submit applications will receive higher (less desirable) selection numbers.</li>
+              </ul>
+            </li>
+            <li>
+              February 2, 2024
+              <ul>
+                <li>Selection numbers and information sent to your Northeastern Email.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p2>Email Example </p2> <br />
+          <p1>This is an example of the email you will receive containing your selection number.</p1><br /><br />
+
+          <img className="exampleImage" src="src/assets/EmailExample.png" ></img>
+
+          <br /><br />
+          <p2>PAWS Placement:</p2>
+          <br /><br />
+          <p1>Placement Assistance with Staff is a part of Northeastern’s Housing Selection & Placement process.  You are guaranteed housing for Fall 2024  Because so many Northeastern students participate in study abroad or co-op opportunities outside of the Boston area, or secure off-campus housing, we can anticipate a number of cancellations and manage available space through PAWS. If you do not select a room during the first selection process, you will participate in the PAWS process.</p1>
+          <ul>
+            <li>We can anticipate a number of student cancellations and manage available space through PAWS.</li>
+            <li>If you do not select a room during the first selection process, you will participate in the PAWS process.</li>
+            <li>
+              PAWS placement form
+              <ul>
+                <li>Placement Forms become available at the beginning of Selection.</li>
+              </ul>
+            </li>
+            <li>Approximately 25% of students will be placed via PAWS, which is a routine part of Northeastern’s Housing Selection & Placement Process. You are still guaranteed university housing for Fall 2024.</li>
+          </ul>
+
           <div id="About"><h1>About</h1></div>
-          <p1>this is some text</p1>
+          <p2>Our Mission:</p2>
+          <br /><br />
+          <p1>Our mission at LiveNEU is to simplify and enhance the dorm room and building selection process for upperclassmen at Northeastern University. We understand the importance of finding the perfect living space that meets individual preferences and needs. With our application, we aim to provide a user-friendly platform that offers comprehensive information about dorm rooms and buildings, helping students make informed decisions about their housing options. By streamlining the search process and offering easy access to essential details, such as room layouts, amenities, and location, we empower students to find the right dorm for themselves quickly and efficiently.</p1>
 
         </div>
 

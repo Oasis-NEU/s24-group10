@@ -27,7 +27,6 @@ html {
   /* red background */
   color: white;
   /* white text color */
-  transition: .3s ease-in-out;
   height: 400px;
   align-items: center;
 }
@@ -48,7 +47,7 @@ html {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
+  float: left;
   color: #000000;
   text-align: center;
   padding: 10px 10px;
@@ -65,18 +64,27 @@ html {
   margin-right: 10px;
 }
 
+.topnav a.gap {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  float: left;
+  height: 40px;
+  display: flex;
+  border-right: 5px solid #F24822;
+}
+
 /* Official LiveNEU logo text */
 .topnav a.logo {
+  padding-right: 10px;
+  margin-right: 0px;
   float: left;
   font-weight: bold;
+  height: 40px;
+  display: flex;
+
 }
-
-
-.topnav a.menu:hover {
-  background-position: left;
-  color: rgb(255, 255, 255);
-}
-
 
 /* Logo when hovered over*/
 .topnav a.logo:hover {
@@ -84,6 +92,14 @@ html {
   color: rgb(255, 255, 255);
 }
 
+.topnav a.menu {
+  float: right;
+}
+
+.topnav a.menu:hover {
+  background-position: left;
+  color: rgb(255, 255, 255);
+}
 
 /* Increase the font size of the <h1> element */
 .header h1 {
@@ -92,10 +108,10 @@ html {
 
 /* Logo in the header */
 .header img {
-  height: 100px;
+  height: 170px;
   width: auto;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 /* section with information */
@@ -116,10 +132,25 @@ html {
   margin-right: 800px;
 }
 
+.exampleImage {
+  height: 300px;
+  width: auto;
+}
+
 
 /* bold text */
 .section p2 {
   font-weight: bold;
+  font-size: 30px;
+}
+
+li {
+  padding-right: 300px;
+}
+
+.section p3 {
+  padding-right: 400px;
+  color: red;
 }
 
 /* #About section */
