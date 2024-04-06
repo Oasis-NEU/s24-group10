@@ -145,17 +145,14 @@ function App() {
             <tr> <td> {dorm.name} </td> <td>*Addresses go here*</td> </tr>
           ))}
         </table>
-      </div>
-
-      <div id="cardSection">
-        a
-        <div id="card">
-          <div id="cardButton">
-            a
-          </div>
+        <br />
+        <div className="cardSection">
+          <a href="#Dorms" className="card"  >  <img className="cardImage" src="src/assets/IV.jpeg" /> <h3> Dorms </h3> </a>
+          <a href="https://housing.northeastern.edu/" target="_blank" className="card">  <img className="cardImage" src="src/assets/NEUHousing.webp" /> <h3> Northeastern Housing </h3> </a>
+          <a href="https://mercury.neu.edu/RunFeature/RunFeature?ftl=Xbff75b7fe39b4d84878a96b942409c5d" target="_blank" className="card">  <img className="cardImage" src="src/assets/ISEC.jpg" /> <h3> Housing Online </h3> </a>
         </div>
-
       </div>
+
     </BrowserRouter>
   )
 }
