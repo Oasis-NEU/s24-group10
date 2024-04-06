@@ -51,7 +51,7 @@ function App() {
         <a href="#Walkthrough" className="menu">Walkthrough</a>
         <a href="#Dorms" className="menu">Dorms</a>
         <a href="#Home" className="menu">Home</a>
-        <a href="#Home" className="logo">LiveNEU </a>
+        <a href="#Home" className="logo">  LiveNEU <img src="src/assets/LiveNEULogoWhite.png" className='second' /> <img src="src/assets/LiveNEULogoWhite.png" className='first' />  </a>
         <a className="gap"></a>
 
       </div>

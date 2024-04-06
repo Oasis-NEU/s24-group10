@@ -87,10 +87,36 @@ html {
   border-left: 5px solid #F24822;
 }
 
+.topnav a.logo:hover img.second {
+  width: 30px;
+  padding-left: 5px;
+}
+
+.topnav a.logo img.second {
+  content: url("src/assets/LiveNEULogoWhite.png");
+
+  width: 0px;
+  transition: .2s;
+  padding-right: 0px;
+}
+
+.topnav a.logo:hover img.first {
+  width: 0px;
+}
+
+.topnav a.logo img.first {
+  padding-left: 5px;
+  width: 30px;
+  padding-right: 0px;
+  content: url("src/assets/LiveNEULogoRed.png");
+  transition: .2s;
+}
+
 /* Logo when hovered over*/
 .topnav a.logo:hover {
   background-position: left;
   color: rgb(255, 255, 255);
+
 }
 
 .topnav a.menu {
@@ -189,12 +215,10 @@ td {
 .cardSection {
   border-top: 10px solid #F24822;
   display: flex;
-  margin: 20px;
   width: 120%;
   height: 500px;
   padding: 40px;
   margin-left: -20px;
-  margin-bottom: 0px;
   background-color: black;
 }
 
@@ -202,42 +226,48 @@ td {
   display: grid;
   align-items: normal;
   transition: .2s ease-in-out;
+  padding-bottom: 20px;
+  padding-top: -20px;
+  height: 430px;
+  margin: 30px;
 }
 
 .card h3 {
   color: white;
   background-color: black;
+  padding: 5px;
   text-align: center;
   border-radius: 5px;
   margin: 30px;
   margin-top: -70px;
   margin-bottom: 70px;
-  transition: .2s ease-in-out;
-
-}
-
-.card h3:hover {
-  padding-bottom: 15px;
-  font-size: 160%;
-  margin-top: -440px;
-  padding-top: 370px;
-  opacity: 80%;
-  background-color: #F24822;
-
-}
-
-.cardImage {
-  width: 405px;
-  height: 450px;
-  margin: 20px;
-  margin-bottom: 0px;
-  color: #dddddd;
-  border-radius: 10px;
+  transition: .4s ease-in-out;
 }
 
 .card:hover {
   transform: scale(1.01);
 }
+
+.card:hover h3 {
+  margin-bottom: 12px;
+  padding-top: 180px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 160%;
+  margin-top: -440px;
+  opacity: 80%;
+  background-color: #F24822;
+}
+
+.cardImage {
+  width: 405px;
+  height: 450px;
+  margin: 0px;
+  color: #dddddd;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+
 
 /* A link in the app */
 .App-link {
