@@ -14,9 +14,9 @@ function App() {
 
   useEffect(() => {
     //return async function run() {
-      console.log("loading");
-      readDorms();
-      readAddress();
+    console.log("loading");
+    readDorms();
+    readAddress();
     //}
   }, [])
 
@@ -62,8 +62,8 @@ function App() {
       <div className="topnav">
         <a href="#About" className="menu">About</a>
 
-        <a href="#Walkthrough" className="menu">Walkthrough</a>
         <a href="#Dorms" className="menu">Dorms</a>
+        <a href="#Walkthrough" className="menu">Walkthrough</a>
         <a href="#Home" className="menu">Home</a>
         <a href="#Home" className="logo">  LiveNEU <img src="/images/LiveNEULogoWhite.png" className='second' /> <img src="/images/LiveNEULogoRed.png" className='first' />  </a>
         <a className="gap"></a>
@@ -143,10 +143,6 @@ function App() {
           <li>Approximately 25% of students will be placed via PAWS, which is a routine part of Northeastern’s Housing Selection & Placement Process. You are still guaranteed university housing for Fall 2024.</li>
         </ul>
 
-        <div id="About"><h1>About</h1></div>
-        <h3>Our Mission:</h3>
-        <h2>Our mission at LiveNEU is to simplify and enhance the dorm room and building selection process for upperclassmen at Northeastern University. We understand the importance of finding the perfect living space that meets individual preferences and needs. With our application, we aim to provide a user-friendly platform that offers comprehensive information about dorm rooms and buildings, helping students make informed decisions about their housing options. By streamlining the search process and offering easy access to essential details, such as room layouts, amenities, and location, we empower students to find the right dorm for themselves quickly and efficiently.</h2>
-
         <div id="Dorms"><h1>Dorms</h1></div>
         <table>
           <tr>
@@ -156,7 +152,7 @@ function App() {
             <th>AAAA</th>
           </tr>
           {dorms.map((dorm) => (
-            <tr key={dorm.id}> <td> {dorm.name} </td> <td key={dorm.address}> <address style={{whiteSpace: "pre-line"}} > {
+            <tr key={dorm.id}> <td> {dorm.name} </td> <td key={dorm.address}> <address style={{ whiteSpace: "pre-line" }} > {
               addresses.find((addr => addr.id == dorm.address)).street +
               "\n" +
               addresses.find((addr => addr.id == dorm.address)).city +
@@ -168,8 +164,10 @@ function App() {
           ))}
         </table>
         <br />
+        <div id="About"><h1>About</h1></div>
+        <h3>Our Mission:</h3>
+        <h2>Our mission at LiveNEU is to simplify and enhance the dorm room and building selection process for upperclassmen at Northeastern University. We understand the importance of finding the perfect living space that meets individual preferences and needs. With our application, we aim to provide a user-friendly platform that offers comprehensive information about dorm rooms and buildings, helping students make informed decisions about their housing options. By streamlining the search process and offering easy access to essential details, such as room layouts, amenities, and location, we empower students to find the right dorm for themselves quickly and efficiently.</h2>
       </div>
-
       <div className="cardSection">
         <a href="#Dorms" className="card"  >  <img className="cardImage" src="/images/IV.jpeg" /> <h3> Dorms </h3> </a>
         <a href="https://housing.northeastern.edu/" target="_blank" className="card">  <img className="cardImage" src="/images/NEUHousing.webp" /> <h3> Northeastern Housing </h3> </a>
