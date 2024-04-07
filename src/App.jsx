@@ -13,11 +13,12 @@ function App() {
   const [addresses, setAddresses] = useState([]);
 
   useEffect(() => {
-    //return async function run() {
-      console.log("loading");
-      readDorms();
-      readAddress();
-    //}
+    async function fetchData() {
+      console.log("loading")
+      await readAddress()
+      await readDorms()
+    }
+    fetchData()
   }, [])
 
   async function readDorms() {
@@ -156,6 +157,7 @@ function App() {
             <th>AAAA</th>
           </tr>
           {dorms.map((dorm) => (
+            //<Link to={`/dorm/${dorm.id}`} activeClassName="active">{dorm.name}</Link>
             <tr key={dorm.id}> <td> {dorm.name} </td> <td key={dorm.address}> <address style={{whiteSpace: "pre-line"}} > {
               addresses.find((addr => addr.id == dorm.address)).street +
               "\n" +
