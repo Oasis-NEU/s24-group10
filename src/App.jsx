@@ -149,8 +149,8 @@ function App() {
           <tr>
             <th>Dorm</th>
             <th>Address</th>
-            <th>Lorem Ipsum</th>
-            <th>AAAA</th>
+            {/* <th>Lorem Ipsum</th> */}
+            {/* <th>AAAA</th> */}
           </tr>
           {dorms.map((dorm) => (
             <tr key={dorm.id}> <td> {dorm.name} </td> <td key={dorm.address}> <address style={{whiteSpace: "pre-line"}} > {
