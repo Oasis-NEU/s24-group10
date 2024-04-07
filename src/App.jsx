@@ -4,17 +4,19 @@ import './App.css'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { Link, createBrowserRouter, RouterProvider, Route, Routes } from 'react-router-dom'
-import { dormTable } from './types/Dorm'
+import { addressTable, dormTable } from './types/Dorm'
 import { supabase } from './utils/supabase';
 import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   const [dorms, setDorms] = useState([]);
+  const [addresses, setAddresses] = useState([]);
 
   useEffect(() => {
     //return async function run() {
       console.log("loading");
       readDorms();
+      readAddress();
     //}
   }, [])
 
@@ -25,6 +27,16 @@ function App() {
       alert(`ERROR ${error.code}:\n${error.message}`);
     } else {
       setDorms(data);
+    }
+  }
+
+  async function readAddress() {
+    const { data, error } = await supabase.from(addressTable).select();
+
+    if (error) {
+      alert(`ERROR ${error.code}:\n${error.message}`);
+    } else {
+      setAddresses(data);
     }
   }
 
@@ -144,7 +156,15 @@ function App() {
             <th>AAAA</th>
           </tr>
           {dorms.map((dorm) => (
-            <tr> <td> {dorm.name} </td> <td>*Addresses go here*</td> </tr>
+            <tr key={dorm.id}> <td> {dorm.name} </td> <td key={dorm.address}> <address style={{whiteSpace: "pre-line"}} > {
+              addresses.find((addr => addr.id == dorm.address)).street +
+              "\n" +
+              addresses.find((addr => addr.id == dorm.address)).city +
+              ", " +
+              addresses.find((addr => addr.id == dorm.address)).state +
+              " " +
+              addresses.find((addr => addr.id == dorm.address)).zipcode
+            } </address> </td> </tr>
           ))}
         </table>
         <br />

@@ -2,7 +2,7 @@
 export interface Dorm {
     id: number;
     name: string;
-    //address: number;
+    address: number;
 }
 
 export interface Address {
