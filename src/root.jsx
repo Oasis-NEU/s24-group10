@@ -1,24 +1,27 @@
 import { useEffect, useState, useRef } from 'react'
-import DormsPage from './DormsPage';
-import './App.css'
+import "./root.css"
+
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { Link, createBrowserRouter, RouterProvider, Route, Routes } from 'react-router-dom'
-import { addressTable, dormTable } from './types/Dorm'
-import { supabase } from './utils/supabase';
 import { BrowserRouter } from 'react-router-dom'
 
-function App() {
+import { Form } from "react-router-dom";
+import { addressTable, dormTable } from './types/Dorm';
+import { supabase } from './utils/supabase';
+import "./Dorms.css"
+
+function root() {
+
   const [dorms, setDorms] = useState([]);
   const [addresses, setAddresses] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      console.log("loading")
-      await readAddress()
-      await readDorms()
-    }
-    fetchData()
+    //return async function run() {
+    console.log("loading");
+    readDorms();
+    readAddress();
+    //}
   }, [])
 
   async function readDorms() {
@@ -53,7 +56,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <>
       <div id="Home"></div>
       <div className="header">
         <h1>LiveNEU</h1>
@@ -63,7 +66,7 @@ function App() {
       <div className="topnav">
         <a href="#About" className="menu">About</a>
 
-        <a href="#Dorms" className="menu">Dorms</a>
+        <a href="Dorms" className="menu">Dorms</a>
         <a href="#Walkthrough" className="menu">Walkthrough</a>
         <a href="#Home" className="menu">Home</a>
         <a href="#Home" className="logo">  LiveNEU <img src="/images/LiveNEULogoWhite.png" className='second' /> <img src="/images/LiveNEULogoRed.png" className='first' />  </a>
@@ -143,28 +146,6 @@ function App() {
           </li>
           <li>Approximately 25% of students will be placed via PAWS, which is a routine part of Northeastern’s Housing Selection & Placement Process. You are still guaranteed university housing for Fall 2024.</li>
         </ul>
-
-        <div id="Dorms"><h1>Dorms</h1></div>
-        <table>
-          <tr>
-            <th>Dorm</th>
-            <th>Address</th>
-            <th>Lorem Ipsum</th>
-            <th>AAAA</th>
-          </tr>
-          {dorms.map((dorm) => (
-            //<Link to={`/dorm/${dorm.id}`} activeClassName="active">{dorm.name}</Link>
-            <tr key={dorm.id}> <td> {dorm.name} </td> <td key={dorm.address}> <address style={{whiteSpace: "pre-line"}} > {
-              addresses.find((addr => addr.id == dorm.address)).street +
-              "\n" +
-              addresses.find((addr => addr.id == dorm.address)).city +
-              ", " +
-              addresses.find((addr => addr.id == dorm.address)).state +
-              " " +
-              addresses.find((addr => addr.id == dorm.address)).zipcode
-            } </address> </td> </tr>
-          ))}
-        </table>
         <br />
         <div id="About"><h1>About</h1></div>
         <h3>Our Mission:</h3>
@@ -175,9 +156,10 @@ function App() {
         <a href="https://housing.northeastern.edu/" target="_blank" className="card">  <img className="cardImage" src="/images/NEUHousing.webp" /> <h3> Northeastern Housing </h3> </a>
         <a href="https://mercury.neu.edu/RunFeature/RunFeature?ftl=Xbff75b7fe39b4d84878a96b942409c5d" target="_blank" className="card">  <img className="cardImage" src="/images/ISEC.jpg" /> <h3> Housing Online </h3> </a>
       </div>
+      </>
 
-    </BrowserRouter>
+    
   )
 }
 
-export default App
+export default root
