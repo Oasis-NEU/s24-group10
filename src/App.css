@@ -238,12 +238,12 @@ td {
 }
 
 .card {
-  display:inline-block;
+  display: inline-block;
   position: relative;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  transition: .2s ease-in-out;  
+  transition: .2s ease-in-out;
 
   /*
   display: grid;
@@ -258,12 +258,12 @@ td {
 
 .card h3 {
   position: absolute;
-  top:85%;
+  top: 85%;
   bottom: -3%;
   padding-block: 1%;
   text-align: center;
   width: 94%;
-  margin-top:-10px;
+  margin-top: -10px;
   margin-left: 3%;
   color: white;
   background-color: black;
@@ -291,12 +291,12 @@ td {
 
 .card:hover h3 {
   position: absolute;
-  top:6%;
-  
+  top: 6%;
+
   padding-block: 50%;
   text-align: center;
-  
-  margin-top:-15px;
+
+  margin-top: -15px;
   opacity: 80%;
   background-color: #F24822;
 
