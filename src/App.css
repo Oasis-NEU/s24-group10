@@ -93,7 +93,7 @@ html {
 }
 
 .topnav a.logo img.second {
-  content: url("src/assets/LiveNEULogoWhite.png");
+  
 
   width: 0px;
   transition: .2s;
@@ -108,7 +108,7 @@ html {
   padding-left: 5px;
   width: 30px;
   padding-right: 0px;
-  content: url("src/assets/LiveNEULogoRed.png");
+  
   transition: .2s;
 }
 
@@ -269,7 +269,7 @@ td {
   background-color: black;
   text-align: center;
   border-radius: 5px;
-  transition: all .4s ease-in-out;
+  transition: all .2s ease-in-out;
   font-size: xx-large;
 
   /*
@@ -311,75 +311,6 @@ td {
   background-color: #F24822;
   */
 }
-
-/*
-.cardSection {
-  position: absolute;
-  align-items: center;
-  border-top: 10px solid #F24822;
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  margin-left: -20px;
-  background-color: black;
-  align-content: center;
-  box-sizing: border-box;
-}
-
-.card {
-  display:inline-block;
-  position: relative;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  transition: .2s ease-in-out;  
-}
-
-.card h3 {
-  position: absolute;
-  top:85%;
-  bottom: -2%;
-  
-  padding-block: 1%;
-  text-align: center;
-  width: 95%;
-  margin-top:-10px;
-  margin-left:5px;
-  
-  color: white;
-  background-color: black;
-  
-  text-align: center;
-  border-radius: 5px;
-  transition: all .4s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.01);
-}
-
-.card:hover h3 {
-  position: absolute;
-  top:5%;
-  bottom: -2%;
-  
-  padding-block: 50%;
-  text-align: center;
-  width:95%;
-  margin-top:-15px;
-  opacity: 80%;
-  background-color: #F24822;
-}
-
-.cardImage {
-  width: 405px;
-  height: 450px;
-  margin: 0px;
-  color: #dddddd;
-  border-radius: 10px;
-  margin-top: 0px;
-}
-*/
 
 .cardImage {
   width: 405px;

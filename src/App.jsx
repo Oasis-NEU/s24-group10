@@ -12,9 +12,11 @@ function App() {
   const [dorms, setDorms] = useState([]);
 
   useEffect(() => {
-    console.log("loading");
-    readDorms();
-  })
+    return async function run() {
+      console.log("loading");
+      return readDorms();
+    }
+  }, [setDorms])
 
   async function readDorms() {
     const { data, error } = await supabase.from(dormTable).select();
@@ -42,7 +44,7 @@ function App() {
       <div id="Home"></div>
       <div className="header">
         <h1>LiveNEU</h1>
-        <img src="src/assets/LiveNEULogoWhite.png"></img>
+        <img src="/LiveNEULogoWhite.png"></img>
       </div>
 
       <div className="topnav">
@@ -51,7 +53,7 @@ function App() {
         <a href="#Walkthrough" className="menu">Walkthrough</a>
         <a href="#Dorms" className="menu">Dorms</a>
         <a href="#Home" className="menu">Home</a>
-        <a href="#Home" className="logo">  LiveNEU <img src="src/assets/LiveNEULogoWhite.png" className='second' /> <img src="src/assets/LiveNEULogoWhite.png" className='first' />  </a>
+        <a href="#Home" className="logo">  LiveNEU <img src="/LiveNEULogoWhite.png" className='second' /> <img src="/LiveNEULogoRed.png" className='first' />  </a>
         <a className="gap"></a>
 
       </div>
@@ -113,7 +115,7 @@ function App() {
         <h3>Email Example </h3>
         <h2>This is an example of the email you will receive containing your selection number.</h2><br /><br />
 
-        <img className="exampleImage" src="src/assets/EmailExample.png" ></img>
+        <img className="exampleImage" src="/EmailExample.png" ></img>
 
         <h3>PAWS Placement:</h3>
         <h2>Placement Assistance with Staff is a part of Northeastern’s Housing Selection & Placement process.  You are guaranteed housing for Fall 2024  Because so many Northeastern students participate in study abroad or co-op opportunities outside of the Boston area, or secure off-campus housing, we can anticipate a number of cancellations and manage available space through PAWS. If you do not select a room during the first selection process, you will participate in the PAWS process.</h2>
@@ -149,9 +151,9 @@ function App() {
       </div>
 
       <div className="cardSection">
-        <a href="#Dorms" className="card"  >  <img className="cardImage" src="src/assets/IV.jpeg" /> <h3> Dorms </h3> </a>
-        <a href="https://housing.northeastern.edu/" target="_blank" className="card">  <img className="cardImage" src="src/assets/NEUHousing.webp" /> <h3> Northeastern Housing </h3> </a>
-        <a href="https://mercury.neu.edu/RunFeature/RunFeature?ftl=Xbff75b7fe39b4d84878a96b942409c5d" target="_blank" className="card">  <img className="cardImage" src="src/assets/ISEC.jpg" /> <h3> Housing Online </h3> </a>
+        <a href="#Dorms" className="card"  >  <img className="cardImage" src="/IV.jpeg" /> <h3> Dorms </h3> </a>
+        <a href="https://housing.northeastern.edu/" target="_blank" className="card">  <img className="cardImage" src="/NEUHousing.webp" /> <h3> Northeastern Housing </h3> </a>
+        <a href="https://mercury.neu.edu/RunFeature/RunFeature?ftl=Xbff75b7fe39b4d84878a96b942409c5d" target="_blank" className="card">  <img className="cardImage" src="/ISEC.jpg" /> <h3> Housing Online </h3> </a>
       </div>
 
     </BrowserRouter>
