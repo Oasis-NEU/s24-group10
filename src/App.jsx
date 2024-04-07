@@ -13,11 +13,12 @@ function App() {
   const [addresses, setAddresses] = useState([]);
 
   useEffect(() => {
-    return async function fetchData() {
+    async function fetchData() {
       console.log("loading");
       await readAddress();
       await readDorms();
     }
+    fetchData()
   }, [])
 
   async function readDorms() {
